@@ -23,9 +23,9 @@
                     <ComboBoxItem>and so cold</ComboBoxItem>
                 </local:ClassicComboBox>
                 <local:ClassicComboBox IsEnabled="False"
-                                         Width="200"
-                                         SelectedIndex="1"
-                                         HorizontalContentAlignment="Center">
+                                       Width="200"
+                                       SelectedIndex="1"
+                                       HorizontalContentAlignment="Center">
                     <ComboBoxItem>Item 1</ComboBoxItem>
                     <ComboBoxItem>Item 2</ComboBoxItem>
                 </local:ClassicComboBox>
@@ -81,15 +81,14 @@
                                 CornerRadius="{TemplateBinding CornerRadius}"
                                 IsVisible="False" />
                         <TextBox x:Name="PlaceholderTextBlock"
-                                   Grid.Column="0"
-                                   BorderThickness="0"
-                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                   Margin="{TemplateBinding Padding}"
-                                   Text="{TemplateBinding Text, Mode=TwoWay}"
-                                   Foreground="{TemplateBinding PlaceholderForeground}"
-                                   />
-                                   <!-- IsVisible="{TemplateBinding SelectionBoxItem, Converter={x:Static ObjectConverters.IsNull}}" -->
+                                 Grid.Column="0"
+                                 BorderThickness="0"
+                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                 Margin="{TemplateBinding Padding}"
+                                 Text="{TemplateBinding Text, Mode=TwoWay}"
+                                 Foreground="{TemplateBinding PlaceholderForeground}" />
+                        <!-- IsVisible="{TemplateBinding SelectionBoxItem, Converter={x:Static ObjectConverters.IsNull}}" -->
                         <!-- <ContentControl x:Name="ContentPresenter" -->
                         <!--                 Content="{TemplateBinding SelectionBoxItem}" -->
                         <!--                 ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" -->
