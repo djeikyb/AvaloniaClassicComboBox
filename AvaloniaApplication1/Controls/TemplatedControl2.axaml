@@ -2,7 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="using:System"
                     xmlns:local="clr-namespace:AvaloniaApplication1.Controls"
-                    xmlns:copied="clr-namespace:AvaloniaApplication1.Controls.Copied"
                     x:ClassModifier="internal">
     <Design.PreviewWith>
         <Border Padding="20">
@@ -12,12 +11,12 @@
                     <ComboBoxItem>the plums</ComboBoxItem>
                     <ComboBoxItem>that were in</ComboBoxItem>
                     <ComboBoxItem>the icebox</ComboBoxItem>
-                    <ComboBoxItem> </ComboBoxItem>
+                    <ComboBoxItem />
                     <ComboBoxItem>and which</ComboBoxItem>
                     <ComboBoxItem>you were probably</ComboBoxItem>
                     <ComboBoxItem>saving</ComboBoxItem>
                     <ComboBoxItem>for breakfast</ComboBoxItem>
-                    <ComboBoxItem> </ComboBoxItem>
+                    <ComboBoxItem />
                     <ComboBoxItem>Forgive me</ComboBoxItem>
                     <ComboBoxItem>they were delicious</ComboBoxItem>
                     <ComboBoxItem>so sweet</ComboBoxItem>

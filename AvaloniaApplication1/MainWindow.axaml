@@ -1,89 +1,36 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:AvaloniaApplication1"
         xmlns:controls="clr-namespace:AvaloniaApplication1.Controls"
-        xmlns:copied="clr-namespace:AvaloniaApplication1.Controls.Copied"
         Width="350" Height="600"
         Position="0 0"
         x:Class="AvaloniaApplication1.MainWindow"
         x:DataType="vm:ViewModel"
         Title="AvaloniaApplication1">
     <StackPanel Spacing="9" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
-        <StackPanel Spacing="9" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-            <TextBlock VerticalAlignment="Center">
-                <TextBlock Text="Halooo" />
-                <TextBlock Text="{Binding Haloo.Value}" />
-            </TextBlock>
-            <Button Content="🐙"
-                    Command="{Binding Click}"
-                    Background="Transparent"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center" />
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Selected: " />
+            <SelectableTextBlock Text="{Binding #Lol.Text}" />
         </StackPanel>
-        <StackPanel Spacing="9" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-            <ComboBox ItemsSource="{Binding Items}" />
-            <copied:ComboBox ItemsSource="{Binding Items}" />
-        </StackPanel>
-        <copied:ComboBox>
-            <copied:ComboBoxItem>I have eaten</copied:ComboBoxItem>
-            <copied:ComboBoxItem>the plums</copied:ComboBoxItem>
-            <copied:ComboBoxItem>that were in</copied:ComboBoxItem>
-            <copied:ComboBoxItem>the icebox</copied:ComboBoxItem>
-            <copied:ComboBoxItem> </copied:ComboBoxItem>
-            <copied:ComboBoxItem>and which</copied:ComboBoxItem>
-            <copied:ComboBoxItem>you were probably</copied:ComboBoxItem>
-            <copied:ComboBoxItem>saving</copied:ComboBoxItem>
-            <copied:ComboBoxItem>for breakfast</copied:ComboBoxItem>
-            <copied:ComboBoxItem> </copied:ComboBoxItem>
-            <copied:ComboBoxItem>Forgive me</copied:ComboBoxItem>
-            <copied:ComboBoxItem>they were delicious</copied:ComboBoxItem>
-            <copied:ComboBoxItem>so sweet</copied:ComboBoxItem>
-            <copied:ComboBoxItem>and so cold</copied:ComboBoxItem>
-
-        </copied:ComboBox>
-
-        <TextBlock Text="separator" />
-
-        <TextBlock Text="{Binding #Lol.SelectedItem}" />
-        <TextBlock Text="{Binding #Lol.Text}" />
         <controls:TemplatedControl2 Name="Lol" Text="buuuut" MaxDropDownHeight="200">
-            <!-- <controls:TemplatedControl2.SelectionBoxItemTemplate> -->
-            <!--     <DataTemplate> -->
-            <!--         <TextBox Text="{Binding }" /> -->
-            <!--         ~1~ <TextBlock> @1@ -->
-            <!--         ~1~     <TextBlock Text="🐙 " /> @1@ -->
-            <!--         ~1~     <TextBlock Text="{Binding }" /> @1@ -->
-            <!--         ~1~ </TextBlock> @1@ -->
-            <!--     </DataTemplate> -->
-            <!-- </controls:TemplatedControl2.SelectionBoxItemTemplate> -->
             <controls:TemplatedControl2.Styles>
+                <Style Selector="TextBox:focus">
+                    <Style Selector="^ /template/ Border#PART_BorderElement">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="BorderBrush" Value="Transparent" />
+                        <Setter Property="BorderThickness" Value="0" />
+                    </Style>
+                </Style>
 
-    <!-- strip focused state from textbox -->
-    <!-- <Style Selector="TextBox:empty"> -->
-    <!--   <Style Selector="^ /template/ Border#PART_BorderElement"> -->
-    <!--     <Setter Property="Background" Value="Transparent"/> -->
-    <!--     <Setter Property="BorderBrush" Value="Transparent"/> -->
-    <!--     <Setter Property="BorSelectionBoxItemTemplateThickness" Value="0" /> -->
-    <!--   </Style> -->
-    <!-- </Style> -->
-    <Style Selector="TextBox:focus">
-      <Style Selector="^ /template/ Border#PART_BorderElement">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="BorderThickness" Value="0" />
-      </Style>
-    </Style>
-
-    <!-- apply textbox focused state to combobox -->
-    <Style Selector="controls|TemplatedControl2:focus-within">
-      <Style Selector="^ /template/ Border#Background">
-        <Setter Property="Background" Value="{DynamicResource TextControlBackgroundFocused}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrushFocused}"/>
-        <Setter Property="BorderThickness" Value="{DynamicResource TextControlBorderThemeThicknessFocused}" />
-      </Style>
-    </Style>
+                <!-- apply textbox focused state to combobox -->
+                <Style Selector="controls|TemplatedControl2:focus-within">
+                    <Style Selector="^ /template/ Border#Background">
+                        <Setter Property="Background" Value="{DynamicResource TextControlBackgroundFocused}" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrushFocused}" />
+                        <Setter Property="BorderThickness"
+                                Value="{DynamicResource TextControlBorderThemeThicknessFocused}" />
+                    </Style>
+                </Style>
 
             </controls:TemplatedControl2.Styles>
             <ComboBoxItem>I have eaten</ComboBoxItem>

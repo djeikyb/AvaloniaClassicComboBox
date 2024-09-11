@@ -41,10 +41,4 @@
         <PackageReference Condition="$(DefineConstants.Contains(ENABLE_XAML_HOT_RELOAD))" Include="HotAvalonia" Version="1.1.1"/>
         <PackageReference Include="HotAvalonia.Extensions" Version="1.1.1" PrivateAssets="All"/>
     </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="Controls\Copied\ComboBox.cs">
-        <SubType>Code</SubType>
-      </Compile>
-    </ItemGroup>
 </Project>
