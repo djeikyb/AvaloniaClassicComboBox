@@ -6,7 +6,7 @@
     <Design.PreviewWith>
         <Border Padding="20">
             <StackPanel Spacing="10">
-                <local:TemplatedControl2 Text="some text" MaxDropDownHeight="120">
+                <local:ClassicComboBox Text="some text" MaxDropDownHeight="120">
                     <ComboBoxItem>I have eaten</ComboBoxItem>
                     <ComboBoxItem>the plums</ComboBoxItem>
                     <ComboBoxItem>that were in</ComboBoxItem>
@@ -21,15 +21,15 @@
                     <ComboBoxItem>they were delicious</ComboBoxItem>
                     <ComboBoxItem>so sweet</ComboBoxItem>
                     <ComboBoxItem>and so cold</ComboBoxItem>
-                </local:TemplatedControl2>
-                <local:TemplatedControl2 IsEnabled="False"
+                </local:ClassicComboBox>
+                <local:ClassicComboBox IsEnabled="False"
                                          Width="200"
                                          SelectedIndex="1"
                                          HorizontalContentAlignment="Center">
                     <ComboBoxItem>Item 1</ComboBoxItem>
                     <ComboBoxItem>Item 2</ComboBoxItem>
-                </local:TemplatedControl2>
-                <local:TemplatedControl2 PlaceholderText="Error">
+                </local:ClassicComboBox>
+                <local:ClassicComboBox PlaceholderText="Error">
                     <DataValidationErrors.Error>
                         <sys:Exception>
                             <x:Arguments>
@@ -37,12 +37,12 @@
                             </x:Arguments>
                         </sys:Exception>
                     </DataValidationErrors.Error>
-                </local:TemplatedControl2>
+                </local:ClassicComboBox>
             </StackPanel>
         </Border>
     </Design.PreviewWith>
 
-    <ControlTheme x:Key="{x:Type local:TemplatedControl2}" TargetType="local:TemplatedControl2">
+    <ControlTheme x:Key="{x:Type local:ClassicComboBox}" TargetType="local:ClassicComboBox">
         <Setter Property="Padding" Value="{DynamicResource ComboBoxPadding}" />
         <Setter Property="FocusAdorner" Value="{x:Null}" />
         <Setter Property="MaxDropDownHeight" Value="504" />

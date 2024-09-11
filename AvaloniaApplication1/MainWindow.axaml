@@ -12,8 +12,8 @@
             <TextBlock Text="Selected: " />
             <SelectableTextBlock Text="{Binding #Lol.Text}" />
         </StackPanel>
-        <controls:TemplatedControl2 Name="Lol" Text="buuuut" MaxDropDownHeight="200">
-            <controls:TemplatedControl2.Styles>
+        <controls:ClassicComboBox Name="Lol" Text="buuuut" MaxDropDownHeight="200">
+            <controls:ClassicComboBox.Styles>
                 <Style Selector="TextBox:focus">
                     <Style Selector="^ /template/ Border#PART_BorderElement">
                         <Setter Property="Background" Value="Transparent" />
@@ -23,7 +23,7 @@
                 </Style>
 
                 <!-- apply textbox focused state to combobox -->
-                <Style Selector="controls|TemplatedControl2:focus-within">
+                <Style Selector="controls|ClassicComboBox:focus-within">
                     <Style Selector="^ /template/ Border#Background">
                         <Setter Property="Background" Value="{DynamicResource TextControlBackgroundFocused}" />
                         <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrushFocused}" />
@@ -32,7 +32,7 @@
                     </Style>
                 </Style>
 
-            </controls:TemplatedControl2.Styles>
+            </controls:ClassicComboBox.Styles>
             <ComboBoxItem>I have eaten</ComboBoxItem>
             <ComboBoxItem>the plums</ComboBoxItem>
             <ComboBoxItem>that were in</ComboBoxItem>
@@ -47,6 +47,6 @@
             <ComboBoxItem>they were delicious</ComboBoxItem>
             <ComboBoxItem>so sweet</ComboBoxItem>
             <ComboBoxItem>and so cold</ComboBoxItem>
-        </controls:TemplatedControl2>
+        </controls:ClassicComboBox>
     </StackPanel>
 </Window>

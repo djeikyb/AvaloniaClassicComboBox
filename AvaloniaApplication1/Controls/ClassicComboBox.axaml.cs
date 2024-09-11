@@ -3,12 +3,13 @@ using Avalonia.Controls;
 
 namespace AvaloniaApplication1.Controls;
 
-public class TemplatedControl2 : ComboBox
+public class ClassicComboBox : ComboBox
 {
     private string? _text;
 
-    public static readonly DirectProperty<TemplatedControl2, string?> TextProperty = AvaloniaProperty.RegisterDirect<TemplatedControl2, string?>(
-        nameof(Text), o => o.Text, (o, v) => o.Text = v);
+    public static readonly DirectProperty<ClassicComboBox, string?> TextProperty
+        = AvaloniaProperty.RegisterDirect<ClassicComboBox, string?>(
+            nameof(Text), o => o.Text, (o, v) => o.Text = v);
 
     public string? Text
     {
