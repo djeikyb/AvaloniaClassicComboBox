@@ -58,13 +58,15 @@
                         HorizontalAlignment="Stretch"
                         IsOpen="{TemplateBinding IsOpen, Mode=TwoWay}">
                         <!-- <ItemsControl ItemsSource="{TemplateBinding ItemSource}" /> -->
-                        <ListBox ItemsSource="{TemplateBinding ItemSource}" HorizontalAlignment="Stretch">
-                            <ListBox.Styles>
-                                <Style Selector="ListBox /template/ ContentPresenter">
-                                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                                </Style>
-                            </ListBox.Styles>
-                        </ListBox>
+                        <Border HorizontalAlignment="Stretch">
+                            <ListBox ItemsSource="{TemplateBinding ItemSource}" HorizontalAlignment="Stretch">
+                                <ListBox.Styles>
+                                    <Style Selector="ListBox /template/ ContentPresenter">
+                                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                                    </Style>
+                                </ListBox.Styles>
+                            </ListBox>
+                        </Border>
                     </Popup>
                 </Grid>
             </ControlTemplate>

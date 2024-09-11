@@ -43,5 +43,24 @@
             <copied:ComboBoxItem>and so cold</copied:ComboBoxItem>
 
         </copied:ComboBox>
+
+        <TextBlock Text="separator" />
+
+        <controls:TemplatedControl2 MaxDropDownHeight="200">
+            <ComboBoxItem>I have eaten</ComboBoxItem>
+            <ComboBoxItem>the plums</ComboBoxItem>
+            <ComboBoxItem>that were in</ComboBoxItem>
+            <ComboBoxItem>the icebox</ComboBoxItem>
+            <ComboBoxItem>.</ComboBoxItem>
+            <ComboBoxItem>and which</ComboBoxItem>
+            <ComboBoxItem>you were probably</ComboBoxItem>
+            <ComboBoxItem>saving</ComboBoxItem>
+            <ComboBoxItem>for breakfast</ComboBoxItem>
+            <ComboBoxItem>.</ComboBoxItem>
+            <ComboBoxItem>Forgive me</ComboBoxItem>
+            <ComboBoxItem>they were delicious</ComboBoxItem>
+            <ComboBoxItem>so sweet</ComboBoxItem>
+            <ComboBoxItem>and so cold</ComboBoxItem>
+        </controls:TemplatedControl2>
     </StackPanel>
 </Window>

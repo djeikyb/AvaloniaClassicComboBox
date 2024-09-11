@@ -10,11 +10,13 @@
                 <!-- <MergeResourceInclude Source="/Controls/CooooomboBox.axaml" /> -->
                 <MergeResourceInclude Source="/Controls/Copied/ComboBox.axaml" />
                 <MergeResourceInclude Source="/Controls/Copied/ComboBoxItem.axaml" />
+        <MergeResourceInclude Source="/Controls/TemplatedControl2.axaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
     <Application.Styles>
         <FluentTheme />
         <StyleInclude Source="avares://Avalonia.Controls.TreeDataGrid/Themes/Fluent.axaml" />
+        <StyleInclude Source="/Controls/TemplatedControl1.axaml" />
     </Application.Styles>
 </Application>
