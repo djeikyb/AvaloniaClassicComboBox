@@ -81,12 +81,12 @@
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 CornerRadius="{TemplateBinding CornerRadius}"
                                 IsVisible="False" />
-                        <TextBlock x:Name="PlaceholderTextBlock"
+                        <TextBox x:Name="PlaceholderTextBlock"
                                    Grid.Column="0"
                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                    Margin="{TemplateBinding Padding}"
-                                   Text="{TemplateBinding PlaceholderText}"
+                                   Text="{TemplateBinding Text}"
                                    Foreground="{TemplateBinding PlaceholderForeground}"
                                    IsVisible="{TemplateBinding SelectionBoxItem, Converter={x:Static ObjectConverters.IsNull}}" />
                         <ContentControl x:Name="ContentPresenter"
