@@ -1,11 +1,10 @@
 using System;
 using Avalonia;
-using Avalonia.Reactive;
 using Avalonia.Automation;
 using Avalonia.Automation.Peers;
 using Avalonia.Controls;
 
-namespace AvaloniaApplication1.Controls
+namespace AvaloniaApplication1.Controls.Copied
 {
     /// <summary>
     /// A selectable item in a <see cref="ComboBox"/>.

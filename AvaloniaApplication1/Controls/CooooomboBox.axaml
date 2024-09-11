@@ -1,9 +1,10 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:AvaloniaApplication1.Controls"
+                    xmlns:copied="clr-namespace:AvaloniaApplication1.Controls.Copied"
                     x:ClassModifier="internal">
-    <ControlTheme x:Key="{x:Type controls:ComboBox}"
-                  TargetType="controls:ComboBox">
+    <ControlTheme x:Key="{x:Type copied:ComboBox}"
+                  TargetType="copied:ComboBox">
         <Setter Property="Template">
             <ControlTemplate>
                 <StackPanel Orientation="Horizontal">

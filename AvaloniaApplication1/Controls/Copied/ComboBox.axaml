@@ -1,22 +1,24 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="using:System"
+                    xmlns:local="clr-namespace:AvaloniaApplication1.Controls"
+                    xmlns:copied="clr-namespace:AvaloniaApplication1.Controls.Copied"
                     x:ClassModifier="internal">
   <Design.PreviewWith>
     <Border Padding="20">
       <StackPanel Spacing="10">
-        <ComboBox PlaceholderText="Select an item">
-          <ComboBoxItem>Item 1</ComboBoxItem>
-          <ComboBoxItem>Item 2</ComboBoxItem>
-        </ComboBox>
-        <ComboBox IsEnabled="False"
+        <copied:ComboBox PlaceholderText="Select an item">
+          <copied:ComboBoxItem>Item 1</copied:ComboBoxItem>
+          <copied:ComboBoxItem>Item 2</copied:ComboBoxItem>
+        </copied:ComboBox>
+        <copied:ComboBox IsEnabled="False"
                   Width="200"
                   SelectedIndex="1"
                   HorizontalContentAlignment="Center">
-          <ComboBoxItem>Item 1</ComboBoxItem>
-          <ComboBoxItem>Item 2</ComboBoxItem>
-        </ComboBox>
-        <ComboBox PlaceholderText="Error">
+          <copied:ComboBoxItem>Item 1</copied:ComboBoxItem>
+          <copied:ComboBoxItem>Item 2</copied:ComboBoxItem>
+        </copied:ComboBox>
+        <copied:ComboBox PlaceholderText="Error">
           <DataValidationErrors.Error>
             <sys:Exception>
               <x:Arguments>
@@ -24,7 +26,7 @@
               </x:Arguments>
             </sys:Exception>
           </DataValidationErrors.Error>
-        </ComboBox>
+        </copied:ComboBox>
       </StackPanel>
     </Border>
   </Design.PreviewWith>
@@ -37,7 +39,7 @@
   <Thickness x:Key="ComboBoxEditableTextPadding">11,5,32,6</Thickness>
   <x:Double x:Key="ComboBoxMinHeight">32</x:Double>
 
-  <ControlTheme x:Key="{x:Type ComboBox}" TargetType="ComboBox">
+  <ControlTheme x:Key="{x:Type copied:ComboBox}" TargetType="copied:ComboBox">
     <Setter Property="Padding" Value="{DynamicResource ComboBoxPadding}" />
     <Setter Property="FocusAdorner" Value="{x:Null}" />
     <Setter Property="MaxDropDownHeight" Value="504" />
@@ -75,7 +77,7 @@
                     BorderThickness="{TemplateBinding BorderThickness}"
                     CornerRadius="{TemplateBinding CornerRadius}"
                     IsVisible="False"/>
-            <TextBlock x:Name="PlaceholderTextBlock"
+            <TextBox x:Name="PlaceholderTextBlock"
                        Grid.Column="0"
                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"

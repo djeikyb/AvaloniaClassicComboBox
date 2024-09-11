@@ -6,7 +6,7 @@ using Avalonia.Automation.Peers;
 using Avalonia.Automation.Provider;
 using Avalonia.Controls;
 
-namespace AvaloniaApplication1.Controls
+namespace AvaloniaApplication1.Controls.Copied
 {
     public class ComboBoxAutomationPeer : SelectingItemsControlAutomationPeer,
         IExpandCollapseProvider,

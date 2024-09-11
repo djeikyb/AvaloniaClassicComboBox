@@ -6,6 +6,7 @@
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Release'">
@@ -42,7 +43,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Controls\ComboBox.cs">
+      <Compile Update="Controls\Copied\ComboBox.cs">
         <SubType>Code</SubType>
       </Compile>
     </ItemGroup>

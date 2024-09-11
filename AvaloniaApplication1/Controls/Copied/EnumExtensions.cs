@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace Avalonia
+namespace AvaloniaApplication1.Controls.Copied
 {
     /// <summary>
     /// Provides extension methods for enums.

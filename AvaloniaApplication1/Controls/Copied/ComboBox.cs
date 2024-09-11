@@ -8,14 +8,12 @@ using Avalonia.Controls.Primitives;
 using Avalonia.Controls.Shapes;
 using Avalonia.Controls.Templates;
 using Avalonia.Input;
-using Avalonia.Interactivity;
 using Avalonia.Layout;
 using Avalonia.Media;
-using Avalonia.Reactive;
 using Avalonia.VisualTree;
 using R3;
 
-namespace AvaloniaApplication1.Controls
+namespace AvaloniaApplication1.Controls.Copied
 {
     /// <summary>
     /// A drop-down list control.
@@ -409,7 +407,7 @@ namespace AvaloniaApplication1.Controls
 
         private void UpdateSelectionBoxItem(object? item)
         {
-            var contentControl = item as IContentControl;
+            var contentControl = item as ContentControl;
 
             if (contentControl != null)
             {
@@ -462,14 +460,14 @@ namespace AvaloniaApplication1.Controls
 
         private void UpdateFlowDirection()
         {
-            if (SelectionBoxItem is Rectangle rectangle)
-            {
-                if ((rectangle.Fill as VisualBrush)?.Visual is Visual content)
-                {
-                    var flowDirection = content.VisualParent?.FlowDirection ?? FlowDirection.LeftToRight;
-                    rectangle.FlowDirection = flowDirection;
-                }
-            }
+            // if (SelectionBoxItem is Rectangle rectangle)
+            // {
+            //     if ((rectangle.Fill as VisualBrush)?.Visual is Visual content)
+            //     {
+            //         var flowDirection = content.VisualParent?.FlowDirection ?? FlowDirection.LeftToRight;
+            //         rectangle.FlowDirection = flowDirection;
+            //     }
+            // }
         }
 
         private void SelectFocusedItem()
