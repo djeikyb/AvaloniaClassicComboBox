@@ -1,0 +1,36 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:AvaloniaApplication1.Controls"
+                    x:ClassModifier="internal">
+    <ControlTheme x:Key="{x:Type controls:ComboBox}"
+                  TargetType="controls:ComboBox">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox IsChecked="{TemplateBinding IsDropDownOpen, Mode=TwoWay}" />
+                    <TextBox Text="asdf" />
+                    <Button>
+                        <PathIcon x:Name="DropDownGlyph"
+                                  UseLayoutRounding="False"
+                                  IsHitTestVisible="False"
+                                  Height="12"
+                                  Width="12"
+                                  Margin="0,0,10,0"
+                                  HorizontalAlignment="Right"
+                                  VerticalAlignment="Center"
+                                  Foreground="{DynamicResource ComboBoxDropDownGlyphForeground}"
+                                  Data="M1939 486L2029 576L1024 1581L19 576L109 486L1024 1401L1939 486Z"/>
+
+                    </Button>
+                    <Popup Name="PART_Popup"
+                           IsOpen="{TemplateBinding IsDropDownOpen, Mode=TwoWay}">
+                        <!-- <ItemsPresenter Name="PART_ItemsPresenter" -->
+                        <!--                 ItemsPanel="{TemplateBinding ItemsPanel}" /> -->
+                        <!-- -->
+                        <TextBlock Text="hiiiiiiiiii"/>
+                    </Popup>
+                </StackPanel>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
