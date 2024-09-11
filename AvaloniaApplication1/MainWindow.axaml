@@ -24,7 +24,7 @@
         </StackPanel>
         <StackPanel Spacing="9" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
             <ComboBox ItemsSource="{Binding Items}" />
-            <copied:ComboBox  ItemsSource="{Binding Items}"/>
+            <copied:ComboBox ItemsSource="{Binding Items}" />
         </StackPanel>
         <copied:ComboBox>
             <copied:ComboBoxItem>I have eaten</copied:ComboBoxItem>
@@ -46,7 +46,46 @@
 
         <TextBlock Text="separator" />
 
-        <controls:TemplatedControl2 MaxDropDownHeight="200">
+        <TextBlock Text="{Binding #Lol.SelectedItem}" />
+        <TextBlock Text="{Binding #Lol.Text}" />
+        <controls:TemplatedControl2 Name="Lol" Text="buuuut" MaxDropDownHeight="200">
+            <!-- <controls:TemplatedControl2.SelectionBoxItemTemplate> -->
+            <!--     <DataTemplate> -->
+            <!--         <TextBox Text="{Binding }" /> -->
+            <!--         ~1~ <TextBlock> @1@ -->
+            <!--         ~1~     <TextBlock Text="🐙 " /> @1@ -->
+            <!--         ~1~     <TextBlock Text="{Binding }" /> @1@ -->
+            <!--         ~1~ </TextBlock> @1@ -->
+            <!--     </DataTemplate> -->
+            <!-- </controls:TemplatedControl2.SelectionBoxItemTemplate> -->
+            <controls:TemplatedControl2.Styles>
+
+    <!-- strip focused state from textbox -->
+    <!-- <Style Selector="TextBox:empty"> -->
+    <!--   <Style Selector="^ /template/ Border#PART_BorderElement"> -->
+    <!--     <Setter Property="Background" Value="Transparent"/> -->
+    <!--     <Setter Property="BorderBrush" Value="Transparent"/> -->
+    <!--     <Setter Property="BorSelectionBoxItemTemplateThickness" Value="0" /> -->
+    <!--   </Style> -->
+    <!-- </Style> -->
+    <Style Selector="TextBox:focus">
+      <Style Selector="^ /template/ Border#PART_BorderElement">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0" />
+      </Style>
+    </Style>
+
+    <!-- apply textbox focused state to combobox -->
+    <Style Selector="controls|TemplatedControl2:focus-within">
+      <Style Selector="^ /template/ Border#Background">
+        <Setter Property="Background" Value="{DynamicResource TextControlBackgroundFocused}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrushFocused}"/>
+        <Setter Property="BorderThickness" Value="{DynamicResource TextControlBorderThemeThicknessFocused}" />
+      </Style>
+    </Style>
+
+            </controls:TemplatedControl2.Styles>
             <ComboBoxItem>I have eaten</ComboBoxItem>
             <ComboBoxItem>the plums</ComboBoxItem>
             <ComboBoxItem>that were in</ComboBoxItem>
