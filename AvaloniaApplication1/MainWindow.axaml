@@ -12,8 +12,8 @@
             <TextBlock Text="Selected: " />
             <SelectableTextBlock Text="{Binding #Lol.Text}" />
         </StackPanel>
-        <controls:ClassicComboBox Name="Lol" Text="buuuut" MaxDropDownHeight="200">
-            <controls:ClassicComboBox.Styles>
+        <controls:EditableComboBox Name="Lol" Text="buuuut" MaxDropDownHeight="200">
+            <controls:EditableComboBox.Styles>
 
                 <!-- remove textbox focused border from textbox -->
                 <Style Selector="TextBox:focus">
@@ -25,7 +25,7 @@
                 </Style>
 
                 <!-- apply textbox focused border to combobox -->
-                <Style Selector="controls|ClassicComboBox:focus-within">
+                <Style Selector="controls|EditableComboBox:focus-within">
                     <Style Selector="^ /template/ Border#Background">
                         <Setter Property="Background" Value="{DynamicResource TextControlBackgroundFocused}" />
                         <Setter Property="BorderBrush" Value="{DynamicResource TextControlBorderBrushFocused}" />
@@ -34,7 +34,7 @@
                     </Style>
                 </Style>
 
-            </controls:ClassicComboBox.Styles>
+            </controls:EditableComboBox.Styles>
             <ComboBoxItem>I have eaten</ComboBoxItem>
             <ComboBoxItem>the plums</ComboBoxItem>
             <ComboBoxItem>that were in</ComboBoxItem>
@@ -49,6 +49,6 @@
             <ComboBoxItem>they were delicious</ComboBoxItem>
             <ComboBoxItem>so sweet</ComboBoxItem>
             <ComboBoxItem>and so cold</ComboBoxItem>
-        </controls:ClassicComboBox>
+        </controls:EditableComboBox>
     </StackPanel>
 </Window>

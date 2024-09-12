@@ -8,7 +8,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!-- <MergeResourceInclude Source="/Controls/CooooomboBox.axaml" /> -->
-        <MergeResourceInclude Source="/Controls/ClassicComboBox.axaml" />
+        <MergeResourceInclude Source="/Controls/EditableComboBox.axaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
